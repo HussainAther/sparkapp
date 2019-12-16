@@ -2,14 +2,16 @@ import matplotlib.pyplot as plt
 import re
 import sys
 
+from pyspark import SparkContext
 from operator import add
 
 """
 Word count for input file.
 """
 
-infile = sys.argv[1]
+sc = SparkContext("local", "word count")
 
+infile = sc.textFile(sys.argv[1])
 print("Number of lines in the file: %s" %  infile.count())
 
 # Get the words.
