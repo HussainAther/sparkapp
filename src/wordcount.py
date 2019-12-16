@@ -31,7 +31,7 @@ def hist(words):
 
 # Change order of tuple (count, word) to (word, count).
 words = words.map(lambda x:(x[1], x[0]))
-worsd.take(25)
+words.take(25)
 
 # Display the histogram.
 hist(words.take(25))
