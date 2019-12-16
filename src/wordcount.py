@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import re
 import sys
 
-from operatore import add
+from operator import add
 
 """
 Word count for input file.
