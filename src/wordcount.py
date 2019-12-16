@@ -28,3 +28,9 @@ def hist(words):
     plt.yticks(range(len(count)), word)
 
 # Change order of tuple (count, word) to (word, count).
+words = words.map(lambda x:(x[1], x[0]))
+worsd.take(25)
+
+# Display the histogram.
+hist(words.take(25))
+
